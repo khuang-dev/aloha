@@ -7,12 +7,14 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
     scroll-behavior: smooth;
-    font-size: 16px;
   }
   
   
 
 /* Layout */
+body {
+    font-size: 14px;
+}
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -36,8 +38,8 @@ h1, h2 {
 .header-container {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0.25% 2.5%;
 }
 .navigation-container {
@@ -45,14 +47,18 @@ h1, h2 {
     text-align: center;
     margin: auto;
     position: relative;
-    padding-right: 7.5%;
+    order: 3;
+    width: 100%;
+    border-top: solid 1px #d7d7d7;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .navigation-container .link{
     font-family: 'Raleway', serif;
     color: #e2574c;
     font-size: 100%;
     text-decoration: none;
-    padding: 0 1.25vw;
+    padding: 0 2.5vw;
 }
 .navigation-container .link:hover {
     color: #b64036;
@@ -64,13 +70,15 @@ h1, h2 {
 .navigation-container li{
     display: inline-block;
 }
-.aloha-icon {
-    width: 11.5vw;
-    height: 11.5vh;
+.header-container .aloha-icon {
+    width: 20vw;
+    height: 8vh;
+    order: 1;
 }
-.shopping-cart-icon {
-    width: 5vw;
-    height: 9.5vh;
+.header-container .shopping-cart-icon {
+    width: 8vw;
+    height: 10vh;
+    order: 2;
 }
 
 
@@ -82,27 +90,29 @@ h1, h2 {
     justify-content: center;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/banner-girl.png), url(../images/flower-bkgd.jpg);
     background-repeat: repeat, no-repeat, repeat-x;
-    background-position: center, center 10vh , center center;
-    background-size: cover, 18.5%, contain;
+    background-position: center, center 9vh , center center;
+    background-size: cover, 25%, cover;
     text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
     margin: 0 auto;
     position: relative;
     max-width: 100%;
-    padding-top: 16.5%;
-    padding-bottom: 16.5%;
+    padding-top: 26%;
+    padding-bottom: 27%;
 }
 .banner-container h1 {
     font-family: 'Raleway', serif;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     padding-bottom: 1.5%;
     padding-top: 1%;
+    line-height: 30px;
+
 }
 .banner-container h2 {
     font-family: 'Playfair Display', serif;
     color: white;
-    font-size: 4rem;
+    font-size: 2.2rem;
 }
 
 
@@ -116,13 +126,13 @@ h1, h2 {
 }
 .description-container .title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-style: italic;
     margin-bottom: 1.5rem;
 }
 .description-container .description {
     font-family: 'Raleway', serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: lighter;
     line-height: 2;
 }
@@ -144,7 +154,7 @@ h1, h2 {
 .product-container .link {
     font-family: 'Raleway', sans-serif;
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
@@ -156,8 +166,8 @@ h1, h2 {
     flex-grow: 1; 
     justify-content: center;
     text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
-    padding-top: 11%;
-    padding-bottom: 11%;
+    padding-top: 23%;
+    padding-bottom: 23%;
 }
 .product-link .link:hover {
     color: #f5ebc6;
@@ -170,11 +180,13 @@ h1, h2 {
     background-size: cover, cover;
     border: solid 4px white;
     border-left: 0;
+    border-right: 0;
 }
 .product-link.trends {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/trends-category.jpg);
     background-size: cover, cover;
     border: solid 4px white;
+    border-left: 0;
 }
 .product-link.glasses {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/glasses-category.jpg);
@@ -192,23 +204,25 @@ h1, h2 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/bags-category.jpg);
     background-size: cover, cover;
     border: solid 4px white;
+    border-right: 0;
 }
 .product-link.womens {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/womens-category.jpg);
     background-size: cover, cover;
     border: solid 4px white;
     border-right: 0;
+    border-left: 0;
 }
 .img-large {
     background-position: center, center;
     background-size: cover, cover;
-    flex-basis: 50%;
+    flex-basis: 100%;
     max-width: 100%;
 }
 .img-small {
     background-position: center, center;
     background-size: cover, cover; 
-    flex-basis: 25%;
+    flex-basis: 50%;
     max-width: 100%;
 }
 
@@ -263,23 +277,23 @@ h1, h2 {
     line-height: 5vh;
     text-align: center;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/wave-bkgd.jpg);
-    background-size: cover, cover;
+    background-size: cover, 240%;
     background-position: center, bottom;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 330px;
     width: 100%;
     margin: 0 auto;
 }
 .signup-description .title{
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-style: italic;
     text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 .signup-description .description {
     font-family: 'Raleway', serif;
-    font-size: 1.15rem;
+    font-size: 1.025rem;
     font-weight: lighter;
     margin-bottom: 4vh;
 }
@@ -289,25 +303,26 @@ h1, h2 {
  .your-email {
     font-family: 'Raleway', sans-serif;
     color: #2d2d2d;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: lighter;
     background-color: white;
     border-radius: 50px;
     border: 0;
-    width: 448px;
-    height: 48px;
+    width: 85vw;
+    height: 42px;
     padding-left: 20px;
+    /* box-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8); */
 }
 .submit-button {
     font-family: 'Raleway', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #e2574c;
     border-radius: 50px;
     border: 0;
     position: absolute;
-    width: 123px;
-    height: 40px;
+    width: 107px;
+    height: 35px;
     right: 4px;
     top: 4px;
     cursor: pointer;
@@ -321,24 +336,22 @@ h1, h2 {
 /* Footer */
 .footer-container {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-align: left;
+    text-align: center;
     background-color: #242424;
     border-top: solid 7px white;
     width: 100%;
-    height: 290px;
-    padding-top: 4.5%;
-    padding-right: 10%;
-    padding-left: 5%;
-
+    height: 310px;
 }
 .footer-info {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 0.5;
     font-weight: lighter;
+    padding-top: 2vh; 
 }
 .contact {
     margin: 15px 0px;
@@ -363,8 +376,12 @@ h1, h2 {
     text-decoration: none;
     font-weight: lighter;
 }
+.social-media span {
+    display: none;
+}
 .social-media li {
-    margin: 15px 0px;
+    margin: 8px;
+    display: inline-block;
 }
 .social-media .link {
     color: white;
@@ -382,9 +399,135 @@ h1, h2 {
     font-size: 13px;
     width: 1vw;
     padding-right: 2vw;
+    padding-top: 4vh;
 }
 
 /* Tablet Version */
 @media screen and (min-width: 600px) {
+body {
+}
+.header-container {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.navigation-container {
+    order: 0;
+    width: auto;
+    border-top: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 7.5%;
+}
+.navigation-container .link {
+    padding: 0 1.25vw;
 
+}
+.header-container .aloha-icon{
+    order: 0;
+    width: 11.5vw;
+    height: 11.5vh;
+}
+.header-container .shopping-cart-icon {
+    order: 0;
+    width: 5vw;
+    height: 9.5vh;
+}
+.banner-container {
+    background-size: cover, 18.5%, contain;
+    padding-top: 15.5%;
+    padding-bottom: 15.5%;
+}
+.banner-container h1 {
+    line-height: auto;
+    font-size: 1.25rem;
+
+}
+.banner-container h2 {
+    font-size: 4rem;
+
+}
+.description-container .title {
+    font-size: 2.4rem;
+}
+.description-container .description {
+    font-size: 1.15rem;
+}
+.product-container .link {
+    font-size: 2.4rem;
+}
+.product-link {
+    padding-top: 11%;
+    padding-bottom: 11%;
+}
+.product-link.mens {
+    border-right: solid 4px white;
+}
+.product-link.trends {
+    border-left: solid 4px white;
+}
+.product-link.bags {
+    border-right: solid 4px white;
+}
+.product-link.womens {
+    border-left: solid 4px white;
+}
+.img-large {
+flex-basis: 50%;
+}
+.img-small {
+flex-basis: 25%;
+}
+.newsletter {
+    background-size: cover, cover;
+    height: 350px;
+}
+.signup-description .title {
+    font-size: 2.4rem;
+    margin-bottom: 5vh;
+}
+.signup-description .description {
+    font-size: 1.15rem;
+}
+.your-email {
+    font-size: 16px;
+    width: 448px;
+    height: 48px;
+}
+.submit-button {
+    font-size: 16px;
+    width: 123px;
+    height: 40px;
+}
+.footer-container {
+    text-align: left;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 290px;
+    padding-top: 4.5%;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+.footer-info {
+    padding-top: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.social-media span {
+    display: inline-block;
+}
+.social-media li {
+    display: flex;
+    margin: 15px 0px;
+}
+.fab {
+    padding-top: 0;
+}
+
+/* 1240px VERSION */
+@media screen and (min-width: 1240px) {
+    body {
+    font-size: 16px;
+}
+}
 }
