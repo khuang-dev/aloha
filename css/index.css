@@ -168,6 +168,7 @@ h1, h2 {
     text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
     padding-top: 23%;
     padding-bottom: 23%;
+    width: 100%;
 }
 .product-link .link:hover {
     color: #f5ebc6;
@@ -404,8 +405,7 @@ h1, h2 {
 
 /* Tablet Version */
 @media screen and (min-width: 600px) {
-body {
-}
+
 .header-container {
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -420,7 +420,6 @@ body {
 }
 .navigation-container .link {
     padding: 0 1.25vw;
-
 }
 .header-container .aloha-icon{
     order: 0;
@@ -433,18 +432,17 @@ body {
     height: 9.5vh;
 }
 .banner-container {
-    background-size: cover, 18.5%, contain;
-    padding-top: 15.5%;
-    padding-bottom: 15.5%;
+    background-size: cover, 12%, cover;
+    background-position: center, center 9vh, top;
+    padding-top: 12%;
+    padding-bottom: 12%;
 }
 .banner-container h1 {
     line-height: auto;
     font-size: 1.25rem;
-
 }
 .banner-container h2 {
-    font-size: 4rem;
-
+    font-size: 3rem;
 }
 .description-container .title {
     font-size: 2.4rem;
@@ -453,11 +451,11 @@ body {
     font-size: 1.15rem;
 }
 .product-container .link {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
 }
 .product-link {
-    padding-top: 11%;
-    padding-bottom: 11%;
+    padding-top: 10.5%;
+    padding-bottom: 10.5%;
 }
 .product-link.mens {
     border-right: solid 4px white;
@@ -473,9 +471,11 @@ body {
 }
 .img-large {
 flex-basis: 50%;
+max-width: 100%;
 }
 .img-small {
 flex-basis: 25%;
+max-width: 50%;
 }
 .newsletter {
     background-size: cover, cover;
@@ -505,7 +505,7 @@ flex-basis: 25%;
     justify-content: space-between;
     height: 290px;
     padding-top: 4.5%;
-    padding-right: 10%;
+    padding-right: 5%;
     padding-left: 5%;
 }
 .footer-info {
@@ -528,6 +528,17 @@ flex-basis: 25%;
 @media screen and (min-width: 1240px) {
     body {
     font-size: 16px;
+}
+.banner-container {
+    background-size: cover, 18.5%, contain;
+    padding-top: 15.5%;
+    padding-bottom: 15.5%;
+}
+.banner-container h2 {
+    font-size: 4rem;
+}
+.footer-container {
+    padding-right: 10%;
 }
 }
 }
