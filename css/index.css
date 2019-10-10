@@ -151,6 +151,7 @@ h1, h2 {
     text-align: center;
     box-sizing: border-box;
 }
+
 .product-container .link {
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -232,38 +233,46 @@ h1, h2 {
 /* Featured */
 .featured-container .title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-style: italic;
     padding-top: 9vh;
 }
 .all-style-container {
-    display: flex;
-    flex-direction: row;
     cursor: grab;
+    margin-bottom: 7vh;
+}
+.carousel-cell {
+    width: 100%;
+}
+.flickity-prev-next-button {
+    display: none;
 }
 .item-container {
     text-align: center;
+    padding: 60px 0;
 }
 .item-container img {
-    width: 200px;
+    width: 320px;
+    padding: 9px 0;
 }
 .category {
     font-family: 'Raleway', sans-serif;
     color: #969696;
-    font-size: 12px;
+    font-size: 10.5px;
     text-transform: uppercase;
 }
 .product-name {
     display: inline-block;
     font-family: 'Playfair Display', sans-serif;
     color: #e2574c;
-    font-size: 24px; 
+    font-size: 22px;
     line-height: 50px;
 }
 .price {
     font-family: 'Raleway', sans-serif;
     color: #969696;
-    font-size: 16px;
+    font-size: 14px;
+    padding-top: 5px;
 }
 
 
@@ -312,7 +321,6 @@ h1, h2 {
     width: 85vw;
     height: 42px;
     padding-left: 20px;
-    /* box-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8); */
 }
 input[type=email]:focus {
     box-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
@@ -474,12 +482,30 @@ input[type=email]:focus {
     border-left: solid 4px white;
 }
 .img-large {
-flex-basis: 50%;
-max-width: 100%;
+    flex-basis: 50%;
+    max-width: 100%;
 }
 .img-small {
-flex-basis: 25%;
-max-width: 50%;
+    flex-basis: 25%;
+    max-width: 50%;
+}
+.featured-container .title {
+    font-size: 2.4rem;
+}
+.all-style-container {
+    margin-bottom: 9vh;
+}
+.carousel-cell {
+    width: 50%;
+}
+.category {
+    font-size: 12px;
+}
+.product-name {
+    font-size: 24px;
+}
+.price {
+    font-size: 16px;
 }
 .newsletter {
     background-size: cover, cover;
@@ -510,7 +536,7 @@ max-width: 50%;
     height: 290px;
     padding-top: 4.5%;
     padding-right: 5%;
-    padding-left: 5%;
+    padding-left: 2%;
 }
 .footer-info {
     padding-top: 0;
@@ -541,8 +567,21 @@ max-width: 50%;
 .banner-container h2 {
     font-size: 4rem;
 }
+.product-container .link {
+    font-size: 2.4rem;
+}
+.carousel-cell {
+    width: 25%;
+}
+.item-container img {
+    width: 250px;
+}
+.price {
+    padding: 10px 0;
+}
 .footer-container {
-    padding-right: 10%;
+    padding-right: 13%;
+    padding-left: 9%;
 }
 }
 }
