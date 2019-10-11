@@ -240,6 +240,8 @@ h1, h2 {
 .all-style-container {
     cursor: grab;
     margin-bottom: 7vh;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 .carousel-cell {
     width: 100%;
