@@ -10,20 +10,21 @@ const flkty = new Flickity( elem, {
   autoPlay: true
 });
 
-const emailForm=document.getElementById("emailform");
-const emailInput=document.getElementById("youremail").value;
-const emailValue = emailInput.value;
-console.log(emailValue);
+const emailForm = document.getElementById("emailform");
+
+const emailInput = document.getElementById("youremail");
+// const emailValue = emailInput.value;
+console.log(emailInput);
+// console.log(emailValue,emailInput.value);
+
 emailForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    if (emailValue == ""){
-        event.preventDefault();
-        alert("Please submit a valid email address")
+    if ( emailInput.value == ""){
+        alert("Please submit a valid email address") //true
     } else {
-        event.preventDefault();
-        alert("Thanks for subscribing!")
+        alert("Thanks for subscribing!") //false
     }
-})
+});
 
 
 
