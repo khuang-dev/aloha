@@ -326,6 +326,9 @@ input[type=email]:focus {
     box-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
     outline: none;
 }
+input[type=submit]:focus {
+    outline: none;
+}
 .submit-button {
     font-family: 'Raleway', sans-serif;
     color: white;
