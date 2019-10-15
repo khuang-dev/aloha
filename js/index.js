@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         freeScroll: true,
         autoPlay: true
     });
-    //Fixed Header
 
     //Add to cart
     const shoppingCartButton = document.getElementById("shopping-cart-button");
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     //Email
-
     const emailForm = document.getElementById("emailform");
     const emailInput = document.getElementById("youremail");
 
