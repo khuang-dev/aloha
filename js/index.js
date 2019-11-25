@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const shoppingCartButton = document.getElementById("shopping-cart-button");
     const addToCart = document.querySelectorAll(".addtocart");
     let counter = 0;
-    
+
     shoppingCartButton.style.display = "none";
     for (i = 0; i < addToCart.length; i++) {
         addToCart[i].addEventListener("click", function () {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emailForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        if (emailInput.value == "") {
+        if (emailInput.value === "") {
             alert("Please submit a valid email address")
         } else {
             alert("Thanks for subscribing!")
